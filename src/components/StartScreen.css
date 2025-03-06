@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.start h1{
+    font-size: 80px;
+    color: white;
+    margin: 20px;
+}
+
+.start p{
+    font-size: 30px;
+    color: white;
+    margin: 5px 5px 40px 5px;
+}
