@@ -1,9 +1,10 @@
 import './Game.css';
 
-const Game = () => {
+const Game = ({ verifyletter }) => {
     return (
-        <div>
-            Game
+        <div className='game'>
+            <h1>Game</h1>
+            <button onClick={ verifyletter }>Finalizar game</button>
         </div>
     );
 };
