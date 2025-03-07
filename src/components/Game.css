@@ -16,6 +16,13 @@ input{
     border: none;
     border-radius: 10px;
     margin-right: 10px;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+input:focus{
+    outline: none;
+    box-shadow: 0 0 10px white;
 }
 
 button{
@@ -30,6 +37,8 @@ button{
 
 .wordContainer{
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     border: 20px solid #ecfa00;
     margin: 20px 0px 20px 0px;
