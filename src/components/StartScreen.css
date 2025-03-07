@@ -3,7 +3,7 @@
 .start h1{
     font-size: 80px;
     color: white;
-    margin: 20px;
+    margin: 20px 0px 10px 0px;
     letter-spacing: 3px;
 }
 
@@ -11,4 +11,14 @@
     font-size: 25px;
     color: white;
     margin: 5px;
+}
+
+.start div i{
+    font-size: 40px;
+    color: white;
+}
+
+.start button{
+    height: 50px;
+    margin-top: 40px;
 }
