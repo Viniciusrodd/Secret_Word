@@ -30,8 +30,6 @@ const Game = ({ verifyletter }) => {
                 <span>a,</span>
                 <span>b,</span>
             </div>
-
-            <button onClick={ verifyletter }>Finalizar game</button>
         </div>
     );
 };

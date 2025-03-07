@@ -6,26 +6,10 @@
     --color01: #1646a0
 }
 
-html, body{
-    height: 100%;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(
-        to bottom, 
-        darkblue, 
-        #181818,
-        #181818 
- 
-    );
-}
-
 h1{
     font-size: 70px;
     color: white;
-    margin: 20px;
+    margin: 0px ;
     letter-spacing: 3px;
 }
 
@@ -35,13 +19,14 @@ h3{
 }
 
 span{
-    font-size: 20px;
+    font-size: 25px;
     color: white;
 }
 
 p{
     font-size: 20px;
     color: white;
+    margin: 10px 0px 5px 0px;
 }
 
 button {
