@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
-.game p{
-    color: red;
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input{
+    height: 30px;
+    width: 40vw;
+}
+
+button{
+    margin-top: 20px;
 }

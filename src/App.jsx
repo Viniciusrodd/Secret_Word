@@ -24,6 +24,7 @@ function App() {
     const [ pickedWord, setPickedWord ] = useState('');
     const [ pickedCategory, setPickedCategory ] = useState('');
     const [ letter, setletter ] = useState([]);
+
     
     const PickWordAndCategory = () => {
         // Pick random category
@@ -34,6 +35,7 @@ function App() {
         const randomWords = words[randomCategory][Math.floor( Math.random() * words[randomCategory].length )];
         return { randomCategory, randomWords };
     };
+
 
     // START GAME
     const StartGameFunction = () => {
@@ -52,16 +54,19 @@ function App() {
         SetGameStage(stages[1].name)
     };
 
+
     // PROCESS THE LETTER INPUT
     const VerifyLetterFunction = () => {
         SetGameStage(stages[2].name)
     };
+
 
     // RESTART THE GAME
     const Retry = () => {
         SetGameStage(stages[0].name)
     };
 
+    
     return (
         <div className='App'>
             {/* IF's... */}
