@@ -18,6 +18,8 @@ const stages = [    // ESTÁGIOS DO GAME
     { id: 3, name: 'end' }
 ];
 
+const guessesQuantity = 3;
+
 function App() {
     const [ gameStage, SetGameStage ] = useState(stages[0].name);
     const [ words ] = useState(wordsList);
@@ -28,7 +30,7 @@ function App() {
 
     const [ guessedLetters, setGuessedLetters ] = useState([]);
     const [ wrongLetters, setWrongLetters ] = useState([]);
-    const [ guesses, setGuesses] = useState(3);
+    const [ guesses, setGuesses] = useState(guessesQuantity);
     const [ score, setScore] = useState(0);
     
     
@@ -74,20 +76,37 @@ function App() {
             setGuessedLetters((actualGuessedLetters) => [
                 ...actualGuessedLetters,
                 normalizedLetter
-            ])
+            ]);
         }else{
             setWrongLetters((actualWrongLetters) => [
                 ...actualWrongLetters,
                 normalizedLetter
-            ])            
+            ]);
+            
+            setGuesses((actualGuesses) => actualGuesses - 1);
         }
     };
-    console.log('letras certas: ', guessedLetters);
-    console.log('Letras erradas: ', wrongLetters);
+
+    const clearLetterStates = () => {
+        setGuessedLetters([])
+        setWrongLetters([])
+    };
+
+    useEffect(() => {   // Monitoring hook, his function is executed when the "guesses" var changes
+        if(guesses <= 0){
+            // reset all the states
+            clearLetterStates();
+
+            SetGameStage(stages[2].name);
+        }
+    }, [guesses]);
 
     // RESTART THE GAME
     const Retry = () => {
-        SetGameStage(stages[0].name)
+        setScore(0);
+        setGuesses(guessesQuantity);
+
+        SetGameStage(stages[0].name);
     };
 
     return (
