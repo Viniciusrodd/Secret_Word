@@ -125,7 +125,7 @@ function App() {
                     score={ score }
                 />
             )}
-            { gameStage === 'end' && <GameOver retry={ Retry }/> }
+            { gameStage === 'end' && <GameOver retry={ Retry } score={ score }/> }
         </div>
     );
 };

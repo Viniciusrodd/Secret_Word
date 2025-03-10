@@ -62,3 +62,13 @@ button{
 .letterContainer p{
     font-size: 30px;
 }
+
+
+.game h3 span{
+    color: #ecfa00;
+    font-size: 30px;
+}
+
+.letterContainer form button{
+    height: 100%;
+}
