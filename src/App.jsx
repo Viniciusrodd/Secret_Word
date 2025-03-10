@@ -61,6 +61,8 @@ function App() {
         setPickedWord(randomWords)
         setletter(letters)
 
+        console.log(letters)
+
         SetGameStage(stages[1].name)
     }, [PickWordAndCategory]);
 
@@ -109,7 +111,7 @@ function App() {
         const uniqueLetters = [...new Set(letter)];
 
         // win conditions
-        if(guessedLetters.length === uniqueLetters.length){
+        if(guessedLetters.length === uniqueLetters.length && gameStage === stages[1].name){
             // add score
             setScore((actualScore) => actualScore += 100);
             
